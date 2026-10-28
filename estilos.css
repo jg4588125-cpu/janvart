@@ -1,0 +1,3131 @@
+/* ================================
+   ESTILO GENERAL JANVART
+================================ */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f4ff;
+    color: #333;
+}
+
+/* ================================
+   MENÚ
+================================ */
+
+
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #5b4bb7;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e85d9e;
+}
+
+/* ================================
+   ENCABEZADO
+================================ */
+
+h1 {
+    text-align: center;
+    color: #5b4bb7;
+    font-size: 42px;
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+
+body > p {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+}
+
+/* ================================
+   CATÁLOGO
+================================ */
+
+h2 {
+    text-align: center;
+    margin-top: 45px;
+    color: #333;
+}
+
+#catalogo {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+/* ================================
+   TARJETAS DE PRODUCTOS
+================================ */
+
+#catalogo > div {
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #faf9ff,
+        #f5fffc
+    );
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+    text-align: center;
+    transition: 0.3s;
+}
+
+#catalogo > div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+#catalogo h3 {
+    color: #5b4bb7;
+    font-size: 20px;
+}
+
+#catalogo p {
+    color: #555;
+    line-height: 1.5;
+}
+
+#catalogo strong {
+    color: #333;
+}
+
+/* ===================================
+   CALCULADORA DE COSTOS JANVART
+=================================== */
+
+#calculadora {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto 50px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
+}
+
+#calculadora label {
+    font-weight: bold;
+    color: #5b4bb7;
+    margin-bottom: -8px;
+}
+
+#calculadora input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+#calculadora input:focus {
+    border-color: #5b4bb7;
+}
+
+#calculadora button {
+    grid-column: 1 / -1;
+    padding: 13px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #5b4bb7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#calculadora button:hover {
+    opacity: 0.9;
+}
+
+#resultado {
+    grid-column: 1 / -1;
+    margin-top: 10px;
+}
+
+/* En pantallas pequeñas se muestra en una sola columna */
+@media (max-width: 650px) {
+    #calculadora {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    #calculadora button,
+    #resultado {
+        grid-column: 1;
+    }
+}
+
+/* ================================
+   INVENTARIO DE MATERIALES JANVART
+================================ */
+
+#inventario {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto 60px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+#inventario h2 {
+    text-align: center;
+    color: #5b4bb7;
+    margin-bottom: 25px;
+}
+
+#inventario input,
+#inventario select {
+    padding: 12px;
+    margin: 8px 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+#inventario button {
+    padding: 12px 20px;
+    margin: 8px 5px;
+    border: none;
+    border-radius: 10px;
+    background: #5b4bb7;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#inventario button:hover {
+    opacity: 0.85;
+}
+
+/* =====================================
+   TABLA INVENTARIO JANVART
+===================================== */
+
+#tablaInventario {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 25px;
+    overflow-x: auto;
+    border-radius: 16px;
+}
+
+#tablaInventario table {
+    width: 100%;
+    min-width: 1050px;
+    border-collapse: collapse;
+    background: white;
+}
+
+#tablaInventario th {
+    background: #5b4bb7;
+    color: white;
+    padding: 13px 10px;
+    text-align: center;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+#tablaInventario td {
+    padding: 11px 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 13px;
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+#tablaInventario th,
+#tablaInventario td {
+    border: 1px solid #eeeeee;
+}
+/* ===================================
+   ORDEN INTERNO DEL INVENTARIO
+=================================== */
+
+.campo-inventario {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-inventario label {
+    font-weight: bold;
+    color: #5b4bb7;
+    margin-bottom: 6px;
+}
+
+.campo-inventario input,
+.campo-inventario select {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#botonAgregarMaterial {
+    display: block;
+    width: 260px;
+    max-width: 100%;
+    margin: 25px auto 35px;
+    padding: 14px 25px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* En celular pasa a una sola columna */
+@media (max-width: 650px) {
+
+    #inventario {
+        grid-template-columns: 1fr;
+    }
+
+    #botonAgregarMaterial,
+    #tablaInventario {
+        grid-column: 1;
+    }
+}
+/* ==============================
+   LOGO Y ENCABEZADO JANVART
+   ============================== */
+
+.encabezado {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 10px;
+    background: white;
+}
+
+.logo-janvart {
+    width: 180px;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* =====================================
+   ZONA CREATIVA JANVART
+===================================== */
+
+#zona-creativa {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 40px 25px;
+    text-align: center;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+#zona-creativa h2 {
+    color: #5b4bb7;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#zona-creativa > p {
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.juegos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.juego {
+    background: #f7f4ff;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.juego:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.13);
+}
+
+.icono-juego {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.juego h3 {
+    color: #5b4bb7;
+    font-size: 21px;
+}
+
+.juego p {
+    color: #555;
+    min-height: 48px;
+}
+
+.juego button {
+    border: none;
+    background: #5b4bb7;
+    color: white;
+    padding: 11px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.juego button:hover {
+    transform: scale(1.05);
+}
+
+/* Adaptación para celular */
+
+@media (max-width: 700px) {
+
+    .juegos {
+        grid-template-columns: 1fr;
+    }
+
+    #zona-creativa {
+        padding: 25px 15px;
+    }
+}
+
+
+/* =====================================
+   JUEGO 1 - COLOREA CON JANVART
+   ===================================== */
+
+#juegoColorear {
+    margin-top: 25px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.paleta-colores {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0 25px;
+}
+
+.color-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.20);
+    cursor: pointer;
+}
+
+.color-btn:hover {
+    transform: scale(1.15);
+}
+
+/* Muñeco para colorear */
+
+.dibujo-colorear {
+    position: relative;
+    width: 220px;
+    height: 330px;
+    margin: 20px auto;
+}
+
+.parte-colorear {
+    position: absolute;
+    background: white;
+    border: 4px solid #333;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/* Cabeza */
+
+.cabeza {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    top: 0;
+    left: 46px;
+}
+
+/* Cuerpo */
+
+.cuerpo {
+    width: 130px;
+    height: 140px;
+    border-radius: 45% 45% 35% 35%;
+    top: 115px;
+    left: 41px;
+}
+
+/* Brazos */
+
+.brazo {
+    width: 35px;
+    height: 120px;
+    border-radius: 25px;
+    top: 125px;
+}
+
+.brazo.izquierdo {
+    left: 5px;
+    transform: rotate(12deg);
+}
+
+.brazo.derecho {
+    right: 5px;
+    transform: rotate(-12deg);
+}
+
+/* Piernas */
+
+.pierna {
+    width: 45px;
+    height: 90px;
+    border-radius: 20px;
+    top: 235px;
+}
+
+.pierna.izquierda {
+    left: 52px;
+}
+
+.pierna.derecha {
+    right: 52px;
+}
+
+
+/* ==========================================
+   DIBUJO GATITO - JANVART
+   ========================================== */
+
+#dibujoSeleccionado {
+    position: relative;
+    width: 260px;
+    height: 330px;
+    margin: 25px auto;
+}
+
+.gatito-janvart {
+    position: relative;
+    width: 260px;
+    height: 320px;
+    margin: auto;
+}
+
+/* Cabeza */
+.gato-cabeza {
+    position: absolute;
+    width: 145px;
+    height: 125px;
+    border: 4px solid #444;
+    border-radius: 48% 48% 45% 45%;
+    background: white;
+    left: 55px;
+    top: 35px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+/* Orejas */
+.gato-oreja {
+    position: absolute;
+    width: 48px;
+    height: 58px;
+    background: white;
+    border: 4px solid #444;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.oreja-izquierda {
+    left: 2px;
+    top: -20px;
+}
+
+.oreja-derecha {
+    right: 2px;
+    top: -20px;
+}
+
+/* Ojos */
+.gato-ojo {
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    top: 48px;
+}
+
+.ojo-izquierdo {
+    left: 38px;
+}
+
+.ojo-derecho {
+    right: 38px;
+}
+
+/* Nariz */
+.gato-nariz {
+    position: absolute;
+    width: 14px;
+    height: 10px;
+    background: #ff8fab;
+    border-radius: 50%;
+    left: 65px;
+    top: 75px;
+}
+
+/* Cuerpo */
+.gato-cuerpo {
+    position: absolute;
+    width: 125px;
+    height: 135px;
+    border: 4px solid #444;
+    border-radius: 45% 45% 35% 35%;
+    background: white;
+    left: 65px;
+    top: 145px;
+    cursor: pointer;
+}
+
+/* Patas */
+.gato-pata {
+    position: absolute;
+    width: 45px;
+    height: 65px;
+    border: 4px solid #444;
+    border-radius: 45%;
+    background: white;
+    top: 245px;
+    cursor: pointer;
+}
+
+.pata-izquierda {
+    left: 68px;
+}
+
+.pata-derecha {
+    right: 68px;
+}
+
+/* Cola */
+.gato-cola {
+    position: absolute;
+    width: 80px;
+    height: 110px;
+    border: 15px solid #444;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0 80px 0 0;
+    right: 15px;
+    top: 170px;
+    background: transparent !important;
+    cursor: pointer;
+}
+
+
+/* Permitir colorear correctamente las patas del gatito */
+
+.gato-pata {
+    cursor: pointer;
+    z-index: 5;
+}
+
+.pata-izquierda,
+.pata-derecha {
+    position: absolute;
+    z-index: 5;
+}
+
+.gato-cola {
+    z-index: 1;
+    pointer-events: auto;
+}
+
+
+/* ========================================
+   DINOSAURIO JANVART PARA COLOREAR
+======================================== */
+
+.dino-janvart {
+    position: relative;
+    width: 320px;
+    height: 330px;
+    margin: 40px auto;
+}
+
+/* Cuerpo */
+.dino-cuerpo {
+    position: absolute;
+    width: 175px;
+    height: 150px;
+    background-color: white;
+    border: 4px solid #333;
+    border-radius: 55% 50% 45% 50%;
+    left: 70px;
+    top: 120px;
+    cursor: pointer;
+}
+
+/* Cabeza */
+.dino-cabeza {
+    position: absolute;
+    width: 115px;
+    height: 105px;
+    background-color: white;
+    border: 4px solid #333;
+    border-radius: 55% 55% 45% 45%;
+    left: 155px;
+    top: 45px;
+    cursor: pointer;
+    z-index: 4;
+}
+
+/* Ojo */
+.dino-ojo {
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    right: 25px;
+    top: 25px;
+}
+
+/* Sonrisa */
+.dino-sonrisa {
+    position: absolute;
+    width: 35px;
+    height: 15px;
+    border-bottom: 3px solid #333;
+    border-radius: 50%;
+    right: 15px;
+    top: 58px;
+}
+
+/* Barriga */
+.dino-barriga {
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    background-color: white;
+    border: 4px solid #333;
+    border-radius: 50%;
+    left: 125px;
+    top: 155px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* Patas */
+.dino-pata {
+    position: absolute;
+    width: 55px;
+    height: 75px;
+    background-color: white;
+    border: 4px solid #333;
+    border-radius: 45% 45% 35% 35%;
+    top: 235px;
+    cursor: pointer;
+}
+
+.pata-dino-izquierda {
+    left: 85px;
+}
+
+.pata-dino-derecha {
+    left: 185px;
+}
+
+/* Cola */
+.dino-cola {
+    position: absolute;
+    width: 110px;
+    height: 65px;
+    background-color: white;
+    border: 4px solid #333;
+    border-radius: 80% 10% 80% 20%;
+    left: 5px;
+    top: 155px;
+    transform: rotate(-20deg);
+    cursor: pointer;
+}
+
+/* Placas de la espalda */
+.dino-placa {
+    position: absolute;
+    width: 35px;
+    height: 40px;
+    background-color: white;
+    border: 4px solid #333;
+    transform: rotate(45deg);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.placa1 {
+    left: 72px;
+    top: 105px;
+}
+
+.placa2 {
+    left: 95px;
+    top: 85px;
+}
+
+.placa3 {
+    left: 125px;
+    top: 75px;
+}
+/* =========================
+   OSITO JANVART
+========================= */
+
+.osito-janvart {
+    position: relative;
+    width: 220px;
+    height: 280px;
+    margin: 40px auto;
+}
+
+/* Cuerpo */
+.oso-cuerpo {
+    position: absolute;
+    width: 120px;
+    height: 135px;
+    background-color: #c98b5b;
+    border: 4px solid #5c3b28;
+    border-radius: 50%;
+    left: 50px;
+    top: 110px;
+    cursor: pointer;
+}
+
+/* Cabeza */
+.oso-cabeza {
+    position: absolute;
+    width: 130px;
+    height: 115px;
+    background-color: #c98b5b;
+    border: 4px solid #5c3b28;
+    border-radius: 50%;
+    left: 45px;
+    top: 25px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+/* Orejas */
+.oso-oreja {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: #c98b5b;
+    border: 4px solid #5c3b28;
+    border-radius: 50%;
+    top: -15px;
+}
+
+.oreja-oso-izquierda {
+    left: 5px;
+}
+
+.oreja-oso-derecha {
+    right: 5px;
+}
+
+/* Ojos */
+.oso-ojo {
+    position: absolute;
+    width: 12px;
+    height: 16px;
+    background: #222;
+    border-radius: 50%;
+    top: 42px;
+}
+
+.ojo-oso-izquierdo {
+    left: 35px;
+}
+
+.ojo-oso-derecho {
+    right: 35px;
+}
+
+/* Hocico */
+.oso-hocico {
+    position: absolute;
+    width: 55px;
+    height: 42px;
+    background: #f2c99d;
+    border-radius: 50%;
+    left: 37px;
+    top: 60px;
+}
+
+.oso-nariz {
+    width: 18px;
+    height: 13px;
+    background: #333;
+    border-radius: 50%;
+    margin: 7px auto;
+}
+
+/* Brazos */
+.oso-brazo {
+    position: absolute;
+    width: 38px;
+    height: 100px;
+    background-color: #c98b5b;
+    border: 4px solid #5c3b28;
+    border-radius: 50%;
+    top: 125px;
+    cursor: pointer;
+}
+
+.brazo-oso-izquierdo {
+    left: 25px;
+    transform: rotate(20deg);
+}
+
+.brazo-oso-derecho {
+    right: 25px;
+    transform: rotate(-20deg);
+}
+
+/* Patas */
+.oso-pata {
+    position: absolute;
+    width: 55px;
+    height: 65px;
+    background-color: #c98b5b;
+    border: 4px solid #5c3b28;
+    border-radius: 50%;
+    top: 210px;
+    cursor: pointer;
+}
+
+.pata-oso-izquierda {
+    left: 40px;
+}
+
+.pata-oso-derecha {
+    right: 40px;
+}
+
+/* Barriga */
+.oso-barriga {
+    position: absolute;
+    width: 75px;
+    height: 85px;
+    background-color: #f2c99d;
+    border-radius: 50%;
+    left: 73px;
+    top: 145px;
+    z-index: 2;
+    cursor: pointer;
+}
+/* =========================
+   ROBOT JANVART
+========================= */
+
+.robot-janvart {
+    position: relative;
+    width: 240px;
+    height: 300px;
+    margin: 40px auto;
+}
+
+/* Antena */
+.robot-antena {
+    position: absolute;
+    width: 12px;
+    height: 35px;
+    background-color: #8fa3b8;
+    border: 3px solid #3d4b59;
+    border-radius: 10px;
+    left: 111px;
+    top: 0;
+    cursor: pointer;
+}
+
+.robot-antena::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #e85d7a;
+    border: 3px solid #3d4b59;
+    border-radius: 50%;
+    left: -7px;
+    top: -16px;
+}
+
+/* Cabeza */
+.robot-cabeza {
+    position: absolute;
+    width: 140px;
+    height: 95px;
+    background-color: #8fa3b8;
+    border: 4px solid #3d4b59;
+    border-radius: 20px;
+    left: 46px;
+    top: 35px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* Ojos */
+.robot-ojo {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #dff8ff;
+    border: 3px solid #3d4b59;
+    border-radius: 50%;
+    top: 20px;
+}
+
+.ojo-robot-izquierdo {
+    left: 25px;
+}
+
+.ojo-robot-derecho {
+    right: 25px;
+}
+
+/* Boca */
+.robot-boca {
+    position: absolute;
+    width: 55px;
+    height: 10px;
+    background: #3d4b59;
+    border-radius: 10px;
+    left: 42px;
+    top: 65px;
+}
+
+/* Cuerpo */
+.robot-cuerpo {
+    position: absolute;
+    width: 125px;
+    height: 110px;
+    background-color: #8fa3b8;
+    border: 4px solid #3d4b59;
+    border-radius: 15px;
+    left: 54px;
+    top: 135px;
+    cursor: pointer;
+}
+
+/* Brazos */
+.robot-brazo {
+    position: absolute;
+    width: 35px;
+    height: 100px;
+    background-color: #8fa3b8;
+    border: 4px solid #3d4b59;
+    border-radius: 15px;
+    top: 140px;
+    cursor: pointer;
+}
+
+.brazo-robot-izquierdo {
+    left: 12px;
+    transform: rotate(10deg);
+}
+
+.brazo-robot-derecho {
+    right: 12px;
+    transform: rotate(-10deg);
+}
+
+/* Piernas */
+.robot-pierna {
+    position: absolute;
+    width: 42px;
+    height: 65px;
+    background-color: #8fa3b8;
+    border: 4px solid #3d4b59;
+    border-radius: 10px;
+    top: 235px;
+    cursor: pointer;
+}
+
+.pierna-robot-izquierda {
+    left: 58px;
+}
+
+.pierna-robot-derecha {
+    right: 58px;
+}
+/* =========================================
+   UNICORNIO JANVART
+   ========================================= */
+
+/* =========================================
+   UNICORNIO JANVART
+   ========================================= */
+
+.unicornio-janvart {
+    position: relative;
+    width: 260px;
+    height: 340px;
+    margin: 40px auto;
+}
+
+/* CUERPO */
+.unicornio-cuerpo {
+    position: absolute;
+    width: 145px;
+    height: 130px;
+    background-color: #f7c8e8;
+    border: 4px solid #5b4bb7;
+    border-radius: 50%;
+    left: 58px;
+    top: 150px;
+    cursor: pointer;
+}
+
+/* CABEZA */
+.unicornio-cabeza {
+    position: absolute;
+    width: 115px;
+    height: 115px;
+    background-color: #f7c8e8;
+    border: 4px solid #5b4bb7;
+    border-radius: 50%;
+    left: 73px;
+    top: 55px;
+    z-index: 4;
+    cursor: pointer;
+}
+
+/* OJO */
+.unicornio-ojo {
+    position: absolute;
+    width: 13px;
+    height: 18px;
+    background-color: #333;
+    border-radius: 50%;
+    right: 23px;
+    top: 47px;
+    z-index: 6;
+}
+
+/* CUERNO */
+.unicornio-cuerno {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 65px solid #ffd166;
+    left: 116px;
+    top: 0;
+    z-index: 5;
+    cursor: pointer;
+}
+
+/* PATAS */
+.unicornio-pata {
+    position: absolute;
+    width: 40px;
+    height: 75px;
+    background-color: #f7c8e8;
+    border: 4px solid #5b4bb7;
+    border-radius: 20px;
+    top: 245px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.pata-unicornio-izquierda {
+    left: 76px;
+}
+
+.pata-unicornio-derecha {
+    right: 76px;
+}
+
+/* COLA */
+.unicornio-cola {
+    position: absolute;
+    width: 75px;
+    height: 85px;
+    background-color: #cdb4db;
+    border: 4px solid #5b4bb7;
+    border-radius: 70% 20% 70% 30%;
+    left: 12px;
+    top: 170px;
+    transform: rotate(25deg);
+    z-index: 1;
+    cursor: pointer;
+}
+/* =========================================
+   ASTRONAUTA JANVART
+   ========================================= */
+
+.astronauta-janvart {
+    position: relative;
+    width: 270px;
+    height: 350px;
+    margin: 40px auto;
+}
+
+/* MOCHILA */
+.astronauta-mochila {
+    position: absolute;
+    width: 110px;
+    height: 135px;
+    background-color: #9aa5b1;
+    border: 4px solid #5b4bb7;
+    border-radius: 20px;
+    left: 35px;
+    top: 135px;
+    cursor: pointer;
+}
+
+/* CASCO */
+.astronauta-casco {
+    position: absolute;
+    width: 125px;
+    height: 120px;
+    background-color: #f4f4f4;
+    border: 5px solid #5b4bb7;
+    border-radius: 50%;
+    left: 72px;
+    top: 20px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+/* VISOR */
+.astronauta-visor {
+    position: absolute;
+    width: 82px;
+    height: 58px;
+    background-color: #8ed8f8;
+    border: 4px solid #5b4bb7;
+    border-radius: 50%;
+    left: 17px;
+    top: 28px;
+}
+
+/* CUERPO */
+.astronauta-cuerpo {
+    position: absolute;
+    width: 120px;
+    height: 125px;
+    background-color: #f4f4f4;
+    border: 4px solid #5b4bb7;
+    border-radius: 30px;
+    left: 75px;
+    top: 130px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+/* PANEL DEL TRAJE */
+.astronauta-panel {
+    position: absolute;
+    width: 55px;
+    height: 35px;
+    background-color: #d9e2ec;
+    border: 3px solid #5b4bb7;
+    border-radius: 8px;
+    left: 30px;
+    top: 45px;
+}
+
+/* BRAZOS */
+.astronauta-brazo {
+    position: absolute;
+    width: 42px;
+    height: 105px;
+    background-color: #f4f4f4;
+    border: 4px solid #5b4bb7;
+    border-radius: 22px;
+    top: 140px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.brazo-astronauta-izquierdo {
+    left: 42px;
+    transform: rotate(15deg);
+}
+
+.brazo-astronauta-derecho {
+    right: 42px;
+    transform: rotate(-15deg);
+}
+
+/* PIERNAS */
+.astronauta-pierna {
+    position: absolute;
+    width: 45px;
+    height: 90px;
+    background-color: #f4f4f4;
+    border: 4px solid #5b4bb7;
+    border-radius: 20px;
+    top: 240px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.pierna-astronauta-izquierda {
+    left: 82px;
+}
+
+.pierna-astronauta-derecha {
+    right: 82px;
+}
+.btn-deshacer {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    background: #ff8fab;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 15px 5px;
+    border-radius: 20px;
+
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* BOTONES DESHACER Y REINICIAR */
+.controles-colorear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0 25px;
+}
+
+.btn-deshacer,
+.btn-reiniciar {
+    display: inline-block !important;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #5b60b7;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-deshacer:hover,
+.btn-reiniciar:hover {
+    transform: translateY(-2px);
+}
+/* SELECTOR DE COLOR PERSONALIZADO */
+.selector-color-personalizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 12px auto 18px;
+    font-weight: bold;
+    color: #5b60b7;
+}
+
+.selector-color-personalizado input[type="color"] {
+    width: 48px;
+    height: 48px;
+    padding: 3px;
+    border: 3px solid #5b60b7;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+.selector-color-personalizado input[type="color"]:hover {
+    transform: scale(1.08);
+}
+/* ===== GALERÍA MIS CREACIONES JANVART ===== */
+
+.galeria-creaciones {
+    margin: 25px auto;
+    padding: 20px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.galeria-creaciones h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#listaCreaciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.tarjeta-creacion {
+    width: 220px;
+    padding: 18px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease;
+}
+
+.tarjeta-creacion:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-creacion h4 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.tarjeta-creacion p {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-creacion button {
+    border: none;
+    border-radius: 15px;
+    padding: 8px 12px;
+    margin: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tarjeta-creacion button:hover {
+    transform: scale(1.05);
+}
+/* MINIATURAS DE MIS CREACIONES */
+.miniatura-creacion {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #f8f8ff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.miniatura-creacion > div {
+    transform: scale(0.45);
+    transform-origin: center center;
+}
+/* BOTONES DE MIS CREACIONES */
+.tarjeta-creacion button {
+    padding: 9px 14px;
+    margin: 5px;
+    border: none;
+    border-radius: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-creacion button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+/* ===== MEMORIA CREATIVA ===== */
+
+#tableroMemoria {
+    display: grid;
+    grid-template-columns: repeat(3, 75px);
+    gap: 10px;
+    justify-content: center;
+    margin: 15px auto;
+}
+
+.carta-memoria {
+    width: 75px;
+    height: 75px;
+    border: none;
+    border-radius: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    background: #f1efff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s;
+}
+
+.carta-memoria:hover {
+    transform: scale(1.06);
+}
+
+.carta-memoria.encontrada {
+    background: #d8f3dc;
+}
+/* ===== ROMPECABEZAS JANVART ===== */
+
+#tableroRompecabezas {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 3px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.pieza-rompecabezas {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    border: 2px solid white;
+    border-radius: 7px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.pieza-rompecabezas:hover {
+    transform: scale(1.04);
+}
+
+.pieza-rompecabezas.seleccionada {
+    outline: 4px solid #9b5de5;
+    transform: scale(0.94);
+}
+
+#mensajeRompecabezas {
+    font-weight: bold;
+    text-align: center;
+    margin: 15px;
+}
+/* ===== SLOGAN JANVART ===== */
+
+.slogan-janvart {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 8px auto 30px;
+    padding: 10px 22px;
+    width: fit-content;
+
+    background: linear-gradient(
+        90deg,
+        #6c4fd3,
+        #4285f4,
+        #27bfa3,
+        #f4b942,
+        #ef6c57
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+/* ===== PRESENTACIÓN DEL LOGO JANVART ===== */
+
+.encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 20px;
+    background: linear-gradient(
+        135deg,
+        #f8f7ff,
+        #eef7ff,
+        #f2fff9
+    );
+}
+
+.logo-janvart {
+    width: 230px;
+    max-width: 80%;
+    height: auto;
+    border-radius: 25px;
+    padding: 10px;
+    background: white;
+
+    box-shadow:
+        0 10px 30px rgba(91, 96, 183, 0.18),
+        0 0 25px rgba(39, 191, 163, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.logo-janvart:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 14px 35px rgba(108, 79, 211, 0.25),
+        0 0 35px rgba(39, 191, 163, 0.20);
+}
+/* ===== MENÚ JANVART ===== */
+
+nav {
+    display: flex;
+        position: sticky;
+    top: 0;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    padding: 12px 20px;
+    margin: 0 auto 25px;
+
+    background: white;
+
+    box-shadow: 0 5px 18px rgba(91, 96, 183, 0.12);
+}
+
+nav a {
+    text-decoration: none;
+    color: #4d4b87;
+    font-weight: 600;
+
+    padding: 10px 16px;
+    border-radius: 20px;
+
+    transition: all 0.25s ease;
+}
+
+nav a:hover {
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #6c4fd3,
+        #4285f4,
+        #27bfa3
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(108, 79, 211, 0.25);
+}
+/* ===== FONDO GENERAL JANVART ===== */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 10% 20%, rgba(108, 79, 211, 0.10), transparent 28%),
+        radial-gradient(circle at 90% 30%, rgba(39, 191, 163, 0.10), transparent 28%),
+        radial-gradient(circle at 20% 80%, rgba(244, 185, 66, 0.10), transparent 25%),
+        radial-gradient(circle at 85% 85%, rgba(239, 108, 87, 0.08), transparent 25%),
+        #fbfbff;
+
+    color: #34335c;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 5px;
+
+    background: linear-gradient(
+        90deg,
+        #6c4fd3,
+        #4285f4,
+        #27bfa3,
+        #f4b942,
+        #ef6c57
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    color: #514f91;
+    text-align: center;
+}
+/* ===== BOTONES GENERALES JANVART ===== */
+
+button {
+    border: none;
+    border-radius: 22px;
+    padding: 10px 18px;
+
+    font-weight: 600;
+    font-size: 14px;
+
+    color: white;
+    background: linear-gradient(
+        90deg,
+        #6c4fd3,
+        #4285f4,
+        #27bfa3
+    );
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(91, 96, 183, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(91, 96, 183, 0.28);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+/* ===== SECCIONES JANVART ===== */
+
+.seccion-janvart {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 28px;
+
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(108, 79, 211, 0.10),
+        0 3px 10px rgba(66, 133, 244, 0.08);
+
+    border: 1px solid rgba(108, 79, 211, 0.10);
+}
+
+.titulo-seccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.titulo-seccion > span {
+    font-size: 38px;
+}
+
+.titulo-seccion h2 {
+    margin: 0;
+    text-align: left;
+    font-size: 27px;
+}
+
+.titulo-seccion p {
+    margin: 5px 0 0;
+    color: #77759b;
+}
+
+/* Detalle especial del catálogo */
+.seccion-catalogo {
+    border-top: 5px solid transparent;
+    border-image: linear-gradient(
+        90deg,
+        #6c4fd3,
+        #4285f4,
+        #27bfa3,
+        #f4b942,
+        #ef6c57
+    ) 1;
+}
+/* ===== CALCULADORA JANVART ===== */
+
+.seccion-calculadora {
+    max-width: 750px;
+}
+
+#calculadora {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#calculadora label {
+    font-weight: 600;
+    color: #514f91;
+    margin-top: 8px;
+}
+
+#calculadora input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 15px;
+
+    border: 2px solid #e3e1f5;
+    border-radius: 14px;
+
+    background: #fcfcff;
+    color: #34335c;
+    font-size: 15px;
+
+    outline: none;
+    transition: 0.25s ease;
+}
+
+#calculadora input:focus {
+    border-color: #6c4fd3;
+
+    box-shadow:
+        0 0 0 4px rgba(108, 79, 211, 0.10);
+}
+
+#calculadora button {
+    margin-top: 18px;
+    padding: 13px 22px;
+    font-size: 16px;
+}
+
+#resultado {
+    margin-top: 18px;
+    padding: 15px;
+    border-radius: 16px;
+    text-align: center;
+    font-weight: 600;
+
+    background: linear-gradient(
+        135deg,
+        rgba(108, 79, 211, 0.08),
+        rgba(39, 191, 163, 0.10)
+    );
+}
+/* ===== INVENTARIO JANVART ===== */
+
+.seccion-inventario {
+    max-width: 850px;
+}
+
+#inventario {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.campo-inventario {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 16px;
+}
+
+.campo-inventario label {
+    font-weight: 600;
+    color: #514f91;
+}
+
+.campo-inventario input,
+.campo-inventario select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 15px;
+
+    border: 2px solid #e3e1f5;
+    border-radius: 14px;
+
+    background: #fcfcff;
+    color: #34335c;
+    font-size: 15px;
+
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.campo-inventario input:focus,
+.campo-inventario select:focus {
+    border-color: #27bfa3;
+    box-shadow: 0 0 0 4px rgba(39, 191, 163, 0.10);
+}
+
+#botonAgregarMaterial {
+    width: 100%;
+    margin-top: 8px;
+    padding: 13px 20px;
+    font-size: 16px;
+
+    background: linear-gradient(
+        90deg,
+        #6c4fd3,
+        #4285f4,
+        #27bfa3
+    );
+}
+
+#tablaInventario {
+    margin-top: 25px;
+}
+/* ===== ZONA CREATIVA JANVART ===== */
+
+#zona-creativa {
+    width: 90%;
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 35px 25px;
+
+    background:
+        radial-gradient(circle at 10% 10%, rgba(108, 79, 211, 0.12), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(39, 191, 163, 0.12), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(244, 185, 66, 0.10), transparent 35%),
+        white;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 12px 35px rgba(108, 79, 211, 0.12);
+
+    box-sizing: border-box;
+}
+
+.encabezado-zona-creativa {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icono-zona {
+    display: block;
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.encabezado-zona-creativa h2 {
+    font-size: 30px;
+    margin: 5px 0 10px;
+}
+
+.encabezado-zona-creativa p {
+    color: #6c6a8f;
+    font-size: 16px;
+    margin: 0 auto 12px;
+}
+
+.mini-slogan {
+    display: inline-block;
+    padding: 8px 18px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(108, 79, 211, 0.10),
+        rgba(66, 133, 244, 0.10),
+        rgba(39, 191, 163, 0.10)
+    );
+
+    color: #5b60b7;
+    font-weight: 600;
+}
+/* ===== EXPERIENCIAS JANVART ===== */
+
+.seccion-experiencias {
+    max-width: 1100px;
+}
+
+.experiencias-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.experiencia {
+    padding: 25px 20px;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f8f7ff
+    );
+
+    border-radius: 22px;
+    border: 1px solid rgba(108, 79, 211, 0.10);
+
+    box-shadow: 0 7px 20px rgba(91, 96, 183, 0.10);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.experiencia:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 13px 28px rgba(91, 96, 183, 0.18);
+}
+
+.experiencia > span {
+    display: block;
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.experiencia h3 {
+    color: #514f91;
+    margin: 8px 0;
+}
+
+.experiencia p {
+    color: #77759b;
+    line-height: 1.6;
+}
+
+/* Adaptación para celular */
+@media (max-width: 800px) {
+    .experiencias-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===== CONTACTO JANVART ===== */
+
+.seccion-contacto {
+    max-width: 1000px;
+    text-align: center;
+}
+
+.contacto-contenido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.contacto-item {
+    padding: 25px 18px;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f8f7ff
+    );
+
+    border-radius: 22px;
+    border: 1px solid rgba(108, 79, 211, 0.10);
+
+    box-shadow: 0 7px 20px rgba(91, 96, 183, 0.10);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.contacto-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 13px 28px rgba(91, 96, 183, 0.18);
+}
+
+.contacto-item > span {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.contacto-item h3 {
+    color: #514f91;
+    margin: 8px 0;
+}
+
+.contacto-item p {
+    color: #77759b;
+    line-height: 1.5;
+}
+
+.contacto-slogan {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 10px 22px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(108, 79, 211, 0.12),
+        rgba(66, 133, 244, 0.12),
+        rgba(39, 191, 163, 0.12),
+        rgba(244, 185, 66, 0.12)
+    );
+
+    color: #5b60b7;
+    font-weight: 600;
+}
+
+@media (max-width: 800px) {
+    .contacto-contenido {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===== BIENVENIDA NUEVOS TALENTOS ===== */
+
+.bienvenida-janvart {
+    width: 90%;
+    max-width: 1000px;
+    margin: 10px auto 35px;
+    padding: 45px 25px;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(108, 79, 211, 0.18), transparent 25%),
+        radial-gradient(circle at 85% 25%, rgba(39, 191, 163, 0.18), transparent 25%),
+        radial-gradient(circle at 50% 100%, rgba(244, 185, 66, 0.18), transparent 30%),
+        white;
+
+    border-radius: 32px;
+
+    box-shadow:
+        0 12px 35px rgba(91, 96, 183, 0.15);
+
+    border: 2px solid rgba(108, 79, 211, 0.15);
+}
+
+.bienvenida-icono {
+    display: block;
+    font-size: 45px;
+    margin-bottom: 8px;
+}
+
+.bienvenida-janvart h2 {
+    margin: 5px 0 18px;
+
+    font-size: 32px;
+
+    background: linear-gradient(
+        90deg,
+        #6c4fd3,
+        #4285f4,
+        #27bfa3,
+        #f4b942,
+        #ef6c57
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.frase-inspiradora {
+    max-width: 750px;
+    margin: 0 auto 18px;
+
+    font-size: 21px;
+    line-height: 1.6;
+
+    color: #4d4b87;
+    font-weight: 600;
+}
+
+.mensaje-ninos {
+    display: inline-block;
+
+    margin-top: 8px;
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    background: rgba(108, 79, 211, 0.08);
+
+    color: #5b60b7;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .bienvenida-janvart {
+        padding: 32px 18px;
+    }
+
+    .bienvenida-janvart h2 {
+        font-size: 25px;
+    }
+
+    .frase-inspiradora {
+        font-size: 18px;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+/* ===== IDENTIDAD PRINCIPAL JANVART ===== */
+
+.identidad-janvart {
+    text-align: center;
+    padding: 18px 20px 5px;
+}
+
+.identidad-janvart h1 {
+    margin: 0;
+    font-size: 46px;
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    background: linear-gradient(
+        90deg,
+        #6c4fd3,
+        #4285f4,
+        #27bfa3,
+        #f4b942,
+        #ef6c57
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.identidad-janvart .slogan-janvart {
+    margin: 8px auto 15px;
+    font-size: 19px;
+    font-weight: 600;
+}
+/* ===== PORTADA SUPERIOR JANVART ===== */
+
+.encabezado {
+    padding-bottom: 5px;
+}
+
+.identidad-janvart {
+    margin-top: -5px;
+    padding-top: 5px;
+}
+
+.logo-janvart {
+    margin-bottom: 0;
+}
+/* ===== ANIMACIÓN ESTRELLA BIENVENIDA ===== */
+
+.bienvenida-icono {
+    display: inline-block;
+    animation: brilloJanvart 2.5s ease-in-out infinite;
+}
+
+@keyframes brilloJanvart {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.18) rotate(8deg);
+    }
+}
+/* ===== EFECTO TARJETA DE BIENVENIDA ===== */
+
+.bienvenida-janvart {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bienvenida-janvart:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 16px 40px rgba(108, 79, 211, 0.18),
+        0 5px 15px rgba(39, 191, 163, 0.10);
+}
+/* ===== EFECTO MENÚ FLOTANTE JANVART ===== */
+
+nav {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(108, 79, 211, 0.10);
+
+    box-shadow:
+        0 5px 20px rgba(91, 96, 183, 0.12);
+}
+/* ===== PRECIO PRODUCTOS JANVART ===== */
+
+#catalogo .precio {
+    display: inline-block;
+    margin: 12px auto;
+    padding: 9px 18px;
+
+    background: linear-gradient(
+        90deg,
+        #6c4fd3,
+        #4285f4,
+        #27bfa3
+    );
+
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+
+    box-shadow: 0 4px 12px rgba(108, 79, 211, 0.20);
+}
+
+#catalogo .precio strong {
+    color: white;
+}
+/* ===== STOCK PRODUCTOS JANVART ===== */
+
+#catalogo .stock-producto {
+    display: inline-block;
+    margin: 8px auto;
+    padding: 7px 15px;
+
+    background: rgba(39, 191, 163, 0.12);
+    border: 1px solid rgba(39, 191, 163, 0.25);
+    border-radius: 18px;
+
+    color: #168b77;
+    font-weight: 600;
+    font-size: 14px;
+}
+/* ===== ETIQUETA PERSONALIZABLE JANVART ===== */
+
+#catalogo .personalizable-producto {
+    display: inline-block;
+    margin: 8px 5px;
+    padding: 7px 15px;
+
+    background: rgba(108, 79, 211, 0.10);
+    border: 1px solid rgba(108, 79, 211, 0.22);
+    border-radius: 18px;
+
+    color: #6c4fd3;
+    font-weight: 600;
+    font-size: 14px;
+}
+/* ===== COSTO DE MATERIALES PRODUCTO ===== */
+
+#catalogo .costo-materiales-producto {
+    margin-top: auto;
+    padding: 10px 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    background: #f8f7ff;
+    border-radius: 12px;
+    border: 1px dashed rgba(108, 79, 211, 0.25);
+
+    color: #77759b;
+    font-size: 13px;
+}
+
+#catalogo .costo-materiales-producto strong {
+    color: #514f91;
+    font-size: 14px;
+}
+/* ===== FICHA DE INFORMACIÓN DEL PRODUCTO ===== */
+
+#catalogo .ficha-producto {
+    margin: 16px 0;
+    padding: 12px 15px;
+
+    background: rgba(108, 79, 211, 0.05);
+    border-radius: 15px;
+
+    text-align: left;
+}
+
+#catalogo .ficha-producto p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    margin: 7px 0;
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid rgba(108, 79, 211, 0.08);
+}
+
+#catalogo .ficha-producto p:last-child {
+    border-bottom: none;
+}
+
+#catalogo .ficha-producto span {
+    color: #77759b;
+    font-size: 13px;
+}
+
+#catalogo .ficha-producto strong {
+    color: #514f91;
+    font-size: 13px;
+    text-align: right;
+}
+#tablaHistorial {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100%;
+    margin-top: 20px;
+    background: white;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#tablaHistorial table {
+    display: table !important;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#tablaHistorial th,
+#tablaHistorial td {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    color: #34335c;
+}
+/* ===============================
+   RESUMEN DEL INVENTARIO JANVART
+   =============================== */
+
+.resumen-inventario {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 10px 0 30px;
+}
+
+.tarjeta-resumen {
+    background: linear-gradient(145deg, #ffffff, #f8f7ff);
+    border: 1px solid rgba(108, 79, 211, 0.12);
+    border-radius: 20px;
+    padding: 22px 15px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(91, 96, 183, 0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta-resumen:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(91, 96, 183, 0.18);
+}
+
+.tarjeta-resumen span {
+    font-size: 30px;
+}
+
+.tarjeta-resumen h3 {
+    margin: 10px 0 8px;
+    color: #514f91;
+    font-size: 16px;
+}
+
+.tarjeta-resumen p {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+    color: #6c4fd3;
+}
+
+@media (max-width: 700px) {
+    .resumen-inventario {
+        grid-template-columns: 1fr;
+    }
+}
+/* =====================================
+   TABLA DE INVENTARIO JANVART
+===================================== */
+
+#tablaInventario {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 16px;
+}
+
+#tablaInventario table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(91, 96, 183, 0.12);
+}
+
+#tablaInventario th {
+    padding: 14px 10px;
+    text-align: center;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+#tablaInventario td {
+    padding: 12px 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+#tablaInventario th,
+#tablaInventario td {
+    border: 1px solid #eeeeee;
+}
+/* =====================================
+   FORMULARIO INVENTARIO JANVART
+===================================== */
+
+#inventario {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.campo-inventario {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.campo-inventario input,
+.campo-inventario select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.formulario-inventario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 30px;
+
+    width: 100%;
+    max-width: 900px;
+    margin: 25px auto;
+
+    box-sizing: border-box;
+}
+.campo-proveedor {
+    grid-column: 1 / -1;
+}
+/* =====================================
+   CONTROLES DEL INVENTARIO JANVART
+===================================== */
+
+.controles-inventario {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: end;
+    width: 100%;
+    margin: 25px 0;
+}
+
+.buscador-inventario,
+.filtro-inventario {
+    display: flex;
+    flex-direction: column;
+}
+
+.buscador-inventario label,
+.filtro-inventario label {
+    font-weight: bold;
+    color: #5b4bb7;
+    margin-bottom: 6px;
+}
+
+.controles-inventario input,
+.controles-inventario select {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .controles-inventario {
+        grid-template-columns: 1fr;
+    }
+}
+/* =====================================
+   TABLA HISTORIAL JANVART
+===================================== */
+
+#tablaHistorial {
+    width: 100%;
+    max-height: 520px;
+    overflow: auto;
+    margin-top: 25px;
+    padding: 0;
+    border-radius: 16px;
+    background: white;
+}
+
+#tablaHistorial table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+}
+
+#tablaHistorial thead th {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #5b4bb7;
+    color: white;
+    padding: 13px 10px;
+    text-align: center;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+#tablaHistorial td {
+    padding: 11px 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 13px;
+    line-height: 1.3;
+    color: #34335c;
+}
+
+#tablaHistorial th,
+#tablaHistorial td {
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+/* BOTÓN DE CONTACTO JANVART */
+
+.boton-contacto {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #6c4fd3,
+        #5b60b7
+    );
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 15px rgba(91, 96, 183, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.boton-contacto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px rgba(91, 96, 183, 0.28);
+}
+/* =========================================
+   ASISTENTE VIRTUAL JANVART
+========================================= */
+
+#botonAsistenteJanvart {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #6c4fd3,
+        #4f7ee8,
+        #25c4b7
+    );
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(91, 75, 183, 0.30);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+#botonAsistenteJanvart:hover {
+    transform: translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 12px 30px rgba(91, 75, 183, 0.40);
+}
+
+#botonAsistenteJanvart span {
+    pointer-events: none;
+}
+/* =========================================
+   VENTANA CHAT - JANVART IA
+========================================= */
+
+#ventanaAsistenteJanvart {
+    position: fixed;
+    right: 25px;
+    bottom: 95px;
+    z-index: 1999;
+
+    width: 360px;
+    max-width: calc(100vw - 30px);
+    height: 500px;
+    max-height: 70vh;
+
+    display: none;
+    flex-direction: column;
+
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+
+    box-shadow: 0 15px 45px rgba(62, 52, 120, 0.25);
+}
+
+.cabecera-asistente {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #6c4fd3,
+        #4f7ee8,
+        #25c4b7
+    );
+
+    color: white;
+}
+
+.cabecera-asistente p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+#cerrarAsistenteJanvart {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+
+    cursor: pointer;
+}
+
+#mensajesAsistenteJanvart {
+    flex: 1;
+    padding: 18px;
+
+    overflow-y: auto;
+
+    background: #f8f8fc;
+}
+
+.mensaje-ia {
+    max-width: 82%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+
+    background: white;
+
+    border-radius: 16px 16px 16px 5px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+
+    line-height: 1.4;
+}
+
+.entrada-asistente {
+    display: flex;
+    gap: 8px;
+
+    padding: 12px;
+
+    background: white;
+    border-top: 1px solid #eeeeee;
+}
+
+#preguntaAsistenteJanvart {
+    flex: 1;
+
+    padding: 12px 14px;
+
+    border: 1px solid #dddddd;
+    border-radius: 25px;
+
+    outline: none;
+}
+
+#preguntaAsistenteJanvart:focus {
+    border-color: #6c4fd3;
+}
+
+#enviarPreguntaJanvart {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #6c4fd3,
+        #25c4b7
+    );
+
+    color: white;
+    cursor: pointer;
+}
+/* =========================================
+   OPCIONES RÁPIDAS - JANVART IA
+========================================= */
+
+.opciones-rapidas-ia {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 5px 0 15px;
+}
+
+.opcion-rapida-ia {
+    padding: 9px 13px;
+    border: 1px solid rgba(108, 79, 211, 0.20);
+    border-radius: 20px;
+    background: white;
+    color: #5b4bb7;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(91, 75, 183, 0.08);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.opcion-rapida-ia:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(
+        135deg,
+        #6c4fd3,
+        #4f7ee8,
+        #25c4b7
+    );
+    color: white;
+    box-shadow: 0 6px 15px rgba(91, 75, 183, 0.20);
+}
+/* =========================================
+   MENSAJES DEL CLIENTE - JANVART IA
+========================================= */
+
+.mensaje-usuario {
+    max-width: 82%;
+    margin: 0 0 12px auto;
+    padding: 12px 14px;
+
+    background: linear-gradient(
+        135deg,
+        #6c4fd3,
+        #4f7ee8
+    );
+
+    color: white;
+
+    border-radius: 16px 16px 5px 16px;
+
+    box-shadow:
+        0 3px 10px rgba(91, 75, 183, 0.15);
+
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+/* =========================================
+   OPCIONES DE ASESOR - JANVART IA
+========================================= */
+
+.opciones-asesor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.boton-whatsapp-asesor,
+.boton-correo-asesor {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px 14px;
+
+    border: none;
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* WhatsApp */
+
+.boton-whatsapp-asesor {
+    background: linear-gradient(
+        135deg,
+        #25c4b7,
+        #43c77b
+    );
+
+    color: white;
+}
+
+/* Correo */
+
+.boton-correo-asesor {
+    background: linear-gradient(
+        135deg,
+        #6c4fd3,
+        #4f7ee8
+    );
+
+    color: white;
+}
+
+/* Efecto al pasar el mouse */
+
+.boton-whatsapp-asesor:hover,
+.boton-correo-asesor:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(91, 75, 183, 0.20);
+}
+/* =====================================
+   ADAPTACIÓN MÓVIL GENERAL JANVART
+===================================== */
+
+@media (max-width: 650px) {
+
+    /* Secciones principales */
+    .seccion-janvart,
+    #zona-creativa {
+        width: 94%;
+        padding: 25px 15px;
+        box-sizing: border-box;
+    }
+
+    /* Menú */
+    nav {
+        gap: 6px;
+        padding: 10px 8px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 9px 12px;
+    }
+
+    /* Experiencias */
+    .contenedor-experiencias {
+        grid-template-columns: 1fr;
+    }
+
+    /* Catálogo */
+    #catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    /* Zona creativa */
+    .juegos {
+        grid-template-columns: 1fr;
+    }
+
+    /* Títulos */
+    .seccion-janvart h2,
+    #zona-creativa h2 {
+        font-size: 24px;
+    }
+
+    /* Logo */
+    .logo-janvart {
+        width: 140px;
+    }
+
+    /* Asistente */
+    #ventanaAsistenteJanvart {
+        width: calc(100vw - 24px);
+        max-width: 380px;
+        right: 12px;
+        bottom: 80px;
+        box-sizing: border-box;
+    }
+}
+/* =========================================
+   JANVART - ADAPTACIÓN FINAL PARA CELULAR
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    /* Evita desbordamientos */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Secciones principales */
+    .seccion-janvart,
+    #zona-creativa {
+        width: 94%;
+        max-width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 24px 15px;
+        box-sizing: border-box;
+    }
+
+    /* Menú */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        padding: 10px 6px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    /* Inicio */
+    .bienvenida-janvart {
+        width: 94%;
+        padding: 28px 16px;
+        box-sizing: border-box;
+    }
+
+    .bienvenida-janvart h2 {
+        font-size: 24px;
+    }
+
+    .frase-inspiradora {
+        font-size: 17px;
+    }
+
+    /* Catálogo: una tarjeta por fila */
+    #catalogo {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        width: 100%;
+    }
+
+    /* Experiencias */
+    .experiencias-grid,
+    .contenedor-experiencias {
+        grid-template-columns: 1fr;
+    }
+
+    /* Zona creativa */
+    .juegos {
+        grid-template-columns: 1fr;
+    }
+
+    /* Calculadora */
+    #calculadora {
+        grid-template-columns: 1fr;
+    }
+
+    #calculadora button,
+    #resultado {
+        grid-column: 1;
+    }
+
+    /* Inventario */
+    #inventario,
+    .resumen-inventario,
+    .controles-inventario {
+        grid-template-columns: 1fr;
+    }
+
+    #botonAgregarMaterial,
+    #tablaInventario {
+        grid-column: 1;
+    }
+
+    /* Contacto */
+    .contacto-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    /* Logo */
+    .logo-janvart {
+        width: 130px;
+        max-width: 100%;
+    }
+
+    /* Asistente JANVART IA */
+    #ventanaAsistenteJanvart {
+        width: calc(100vw - 24px);
+        max-width: none;
+        right: 12px;
+        left: 12px;
+        bottom: 80px;
+        box-sizing: border-box;
+    }
+
+    #botonAsistenteJanvart {
+        right: 12px;
+        bottom: 15px;
+    }
+}
