@@ -3129,3 +3129,112 @@ nav {
         bottom: 15px;
     }
 }
+/* =========================================
+   JANVART - CORRECCIÓN JUEGOS EN CELULAR
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    /* Ningún elemento del juego puede ensanchar la página */
+    #zona-creativa,
+    #zona-creativa * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Permite que botones y controles bajen de fila */
+    #zona-creativa button {
+        white-space: normal;
+    }
+
+    /* Evita que imágenes, canvas o tableros se salgan */
+    #zona-creativa canvas,
+    #zona-creativa img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+/* ACOMODAR SELECTOR DE DIBUJOS EN CELULAR */
+
+@media (max-width: 650px) {
+
+    .selector-dibujos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .selector-dibujos button {
+        flex: 1 1 120px;
+        max-width: 160px;
+        min-width: 0;
+        margin: 0;
+        white-space: normal;
+    }
+}
+/* AJUSTE FINAL DEL JUEGO COLOREAR EN CELULAR */
+
+@media (max-width: 650px) {
+
+    .juego {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .juego p,
+    .juego h3 {
+        white-space: normal;
+        overflow-wrap: break-word;
+        max-width: 100%;
+    }
+
+    .selector-dibujos {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 8px;
+        box-sizing: border-box;
+    }
+
+    .selector-dibujos button {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 10px 5px;
+        font-size: 12px;
+        white-space: normal;
+    }
+}
+/* CONTROLES DE COLOREAR EN CELULAR */
+
+@media (max-width: 650px) {
+
+    .controles-colorear {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 8px;
+        box-sizing: border-box;
+    }
+
+    .controles-colorear button {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 10px 5px;
+        font-size: 12px;
+        white-space: normal;
+    }
+}
